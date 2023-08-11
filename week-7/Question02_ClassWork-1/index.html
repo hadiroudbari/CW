@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="audio__container">
+      <div class="audio__box">
+        <div class="audio__image">
+          <img
+            src="./img/Shadmehr Aghili - Avaz Nemishi.jpg"
+            alt="Shadmehr Aghili"
+          />
+        </div>
+
+        <div class="audio__content">
+          <p class="audio__content--singer">Shadmehr Aghili</p>
+          <div class="audio__content--box">
+            <div>
+              <p class="audio__content--name">Avaz Nemishi</p>
+              <strong class="audio__content--comment">The Best Music</strong>
+            </div>
+            <ion-icon
+              class="audio__controls--icon audio__controls--like"
+              name="heart-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="audio__player">
+        <audio>
+          <source
+            src="./music/Shadmehr Aghili - Avaz Nemishi.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <div class="audio__progress">
+          <div class="audio__progress--current">00:00</div>
+          <input
+            type="range"
+            min="1"
+            max="200"
+            value="0"
+            class="audio__progress--indicator"
+          />
+          <div class="audio__progress--total">00:00</div>
+        </div>
+        <div class="audio__controls">
+          <ion-icon
+            class="audio__controls--icon audio__controls--repeat"
+            name="repeat"
+          ></ion-icon>
+
+          <ion-icon
+            class="audio__controls--icon audio__controls--back"
+            name="play-skip-back"
+          ></ion-icon>
+          <ion-icon
+            class="audio__controls--icon audio__controls--pause"
+            v
+            name="pause"
+          ></ion-icon>
+          <ion-icon
+            class="audio__controls--icon audio__controls--play"
+            name="play"
+          ></ion-icon>
+
+          <ion-icon
+            class="audio__controls--icon audio__controls--forward"
+            name="play-skip-forward"
+          ></ion-icon>
+
+          <ion-icon
+            class="audio__controls--icon audio__controls--list"
+            name="list"
+          ></ion-icon>
+        </div>
+        <div class="audio__volume">
+          <ion-icon
+            class="audio__controls--icon audio__controls--volume"
+            name="volume-high"
+          ></ion-icon>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="audio__volume--indicator"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
