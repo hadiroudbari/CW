@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./script.js"></script>
     <title>Music Player</title>
@@ -12,6 +13,7 @@
       <div class="audio__box">
         <div class="audio__image">
           <img
+            class="audio__image--poster"
             src="./img/Shadmehr Aghili - Avaz Nemishi.jpg"
             alt="Shadmehr Aghili"
           />
@@ -33,9 +35,17 @@
       </div>
 
       <div class="audio__player">
-        <audio>
+        <audio id="audio">
           <source
-            src="./music/Shadmehr Aghili - Avaz Nemishi.mp3"
+            src="https://dl3.behmusic.com/music/1399/11/Irani/Shadmehr%20Aghili%20-%20Avaz%20Nemishi.mp3"
+            type="audio/mpeg"
+          />
+          <source
+            src="http://www.s4.topseda.ir/99/05/20/Shadmehr%20Aghili%20-%20Ghazi.mp3"
+            type="audio/mpeg"
+          />
+          <source
+            src="https://musicfa.co/downloads/create/song/6288/320"
             type="audio/mpeg"
           />
         </audio>
@@ -43,7 +53,7 @@
           <div class="audio__progress--current">00:00</div>
           <input
             type="range"
-            min="1"
+            min="0"
             max="200"
             value="0"
             class="audio__progress--indicator"
@@ -66,7 +76,7 @@
             name="pause"
           ></ion-icon>
           <ion-icon
-            class="audio__controls--icon audio__controls--play"
+            class="audio__controls--icon audio__controls--play active"
             name="play"
           ></ion-icon>
 
@@ -85,13 +95,18 @@
             class="audio__controls--icon audio__controls--volume"
             name="volume-high"
           ></ion-icon>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="99"
-            class="audio__volume--indicator"
-          />
+          <div class="audio__volume--container">
+            <div class="audio__volume--box">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="audio__volume--indicator"
+              />
+              <span class="audio__volume--text">0</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
