@@ -119,19 +119,30 @@ body {
   color: #ecb638;
 }
 
-.audio__player .audio__volume {
+.audio__handlers {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.audio__volume,
+.audio__speed {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.audio__player .audio__volume .audio__controls--volume {
+.audio__controls--volume,
+.audio__speed--icon {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .audio__volume--indicator,
-.audio__progress--indicator {
+.audio__progress--indicator,
+.audio__speed--indicator {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -139,21 +150,24 @@ body {
 }
 
 .audio__volume--indicator::-webkit-slider-runnable-track,
-.audio__progress--indicator::-webkit-slider-runnable-track {
+.audio__progress--indicator::-webkit-slider-runnable-track,
+.audio__speed--indicator::-webkit-slider-runnable-track {
   background-color: #ecb638;
   border-radius: 10px;
   height: 10px;
 }
 
 .audio__volume--indicator::-moz-range-track,
-.audio__progress--indicator::-moz-range-track {
+.audio__progress--indicator::-moz-range-track,
+.audio__speed--indicator::-moz-range-track {
   background-color: #ecb638;
   border-radius: 10px;
   height: 10px;
 }
 
 .audio__volume--indicator::-webkit-slider-thumb,
-.audio__progress--indicator::-webkit-slider-thumb {
+.audio__progress--indicator::-webkit-slider-thumb,
+.audio__speed--indicator::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -3px;
@@ -165,7 +179,8 @@ body {
 }
 
 .audio__volume--indicator::-moz-range-thumb,
-.audio__progress--indicator::-moz-range-thumb {
+.audio__progress--indicator::-moz-range-thumb,
+.audio__speed--indicator::-moz-range-thumb {
   -moz-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -3px;
@@ -177,19 +192,22 @@ body {
   border: none;
 }
 
-.audio__volume--indicator {
+.audio__volume--indicator,
+.audio__speed--indicator {
   width: 150px;
   margin-top: 2.5px;
 }
 
-.audio__volume--container {
+.audio__volume--container,
+.audio__speed--container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.audio__volume--text {
+.audio__volume--text,
+.audio__speed--text {
   position: relative;
   display: block;
   width: 30px;
@@ -207,7 +225,8 @@ body {
   opacity: 0;
 }
 
-.audio__volume--text::before {
+.audio__volume--text::before,
+.audio__speed--text::before {
   content: "";
   position: absolute;
   border: 5px solid #ecb638;
@@ -227,4 +246,82 @@ body {
 
 .audio__player .audio__progress .audio__progress--indicator {
   width: 400px;
+}
+
+.audio__list {
+  position: relative;
+}
+
+.audio__list .audio__list--box {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  display: none;
+}
+
+.show__list {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.audio__list .audio__list--box::after {
+  content: "";
+  position: absolute;
+  border: 10px solid #fff;
+  bottom: -23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.audio__list .audio__list--box .audio__list--item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.audio__list .audio__list--box .audio__list--item:hover {
+  background-color: #ddd;
+}
+
+.audio__list .audio__list--box .audio__list--item:last-child {
+  border-bottom: none;
+}
+
+.audio__list .audio__list--box .audio__list--item img {
+  width: 40px;
+  height: 40px;
+}
+
+.audio__list .audio__list--box .audio__list--item:first-child img {
+  border-top-left-radius: 4px;
+}
+
+.audio__list .audio__list--box .audio__list--item:last-child img {
+  border-bottom-left-radius: 4px;
+}
+
+.audio__list .audio__list--box .audio__list--item p:nth-child(1) {
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.audio__list .audio__list--box .audio__list--item p:nth-child(2) {
+  font-size: 0.6rem;
 }
