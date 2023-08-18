@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./script.js"></script>
     <title>Music Player</title>
@@ -12,6 +13,7 @@
       <div class="audio__box">
         <div class="audio__image">
           <img
+            class="audio__image--poster"
             src="./img/Shadmehr Aghili - Avaz Nemishi.jpg"
             alt="Shadmehr Aghili"
           />
@@ -33,9 +35,32 @@
       </div>
 
       <div class="audio__player">
-        <audio>
+        <audio id="audio">
           <source
-            src="./music/Shadmehr Aghili - Avaz Nemishi.mp3"
+            data-singer="Shadmeher Aghili"
+            data-song="Avaz Nemishi"
+            data-img="./img/Shadmehr Aghili - Avaz Nemishi.jpg"
+            data-favorite="false"
+            data-play="true"
+            src="https://dl3.behmusic.com/music/1399/11/Irani/Shadmehr%20Aghili%20-%20Avaz%20Nemishi.mp3"
+            type="audio/mpeg"
+          />
+          <source
+            data-singer="Shadmeher Aghili"
+            data-song="Ghazi"
+            data-img="./img/Shadmehr-Aghili-ΓÇô-Ghazi.jpg"
+            data-favorite="false"
+            data-play="false"
+            src="http://www.s4.topseda.ir/99/05/20/Shadmehr%20Aghili%20-%20Ghazi.mp3"
+            type="audio/mpeg"
+          />
+          <source
+            data-singer="Shadmeher Aghili"
+            data-song="Bi Ehsas"
+            data-img="./img/shadmehr-picture.jpg"
+            data-favorite="false"
+            data-play="false"
+            src="https://dl.naslmusic.ir/music/1401/01/Shadmehr%20Aghili%20-%20Bi%20Ehsas%20(320-Naslemusic).mp3"
             type="audio/mpeg"
           />
         </audio>
@@ -43,7 +68,7 @@
           <div class="audio__progress--current">00:00</div>
           <input
             type="range"
-            min="1"
+            min="0"
             max="200"
             value="0"
             class="audio__progress--indicator"
@@ -66,7 +91,7 @@
             name="pause"
           ></ion-icon>
           <ion-icon
-            class="audio__controls--icon audio__controls--play"
+            class="audio__controls--icon audio__controls--play active"
             name="play"
           ></ion-icon>
 
@@ -75,23 +100,59 @@
             name="play-skip-forward"
           ></ion-icon>
 
-          <ion-icon
-            class="audio__controls--icon audio__controls--list"
-            name="list"
-          ></ion-icon>
+          <div class="audio__list">
+            <div class="audio__list--box">
+              <!-- <div class="audio__list--item">
+                <img src="./img/Shadmehr Aghili - Avaz Nemishi.jpg" alt="" />
+                <div class="audio__list--content">
+                  <p>Ghazi</p>
+                  <p>Shadmehr | Best Music</p>
+                </div>
+              </div> -->
+            </div>
+            <ion-icon
+              class="audio__controls--icon audio__controls--list"
+              name="list"
+            ></ion-icon>
+          </div>
         </div>
-        <div class="audio__volume">
-          <ion-icon
-            class="audio__controls--icon audio__controls--volume"
-            name="volume-high"
-          ></ion-icon>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value="99"
-            class="audio__volume--indicator"
-          />
+        <div class="audio__handlers">
+          <div class="audio__volume">
+            <ion-icon
+              class="audio__controls--icon audio__controls--volume"
+              name="volume-high"
+            ></ion-icon>
+            <div class="audio__volume--container">
+              <div class="audio__volume--box">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="audio__volume--indicator"
+                />
+                <span class="audio__volume--text">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="audio__speed">
+            <ion-icon
+              class="audio__controls--icon audio__speed--icon"
+              name="speedometer"
+            ></ion-icon>
+            <div class="audio__speed--container">
+              <div class="audio__speed--box">
+                <input
+                  type="range"
+                  min="50"
+                  max="200"
+                  value="100"
+                  class="audio__speed--indicator"
+                />
+                <span class="audio__speed--text">0</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
