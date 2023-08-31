@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result__modal">
+        <div class="cross">
+          <div class="line-left"></div>
+          <div class="line-right"></div>
+        </div>
+        <div class="circle"></div>
+        <p class="result__text">WINNER!</p>
+      </div>
+
+      <div class="players">
+        <div class="player__cross deactive">
+          <div class="icon__cross">
+            <div class="line-left"></div>
+            <div class="line-right"></div>
+          </div>
+          <div class="score">0</div>
+        </div>
+
+        <div class="player__circle deactive">
+          <div class="icon__circle"></div>
+          <div class="score">0</div>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <td class="line-x"></td>
+          <td class="line-x-2"></td>
+          <td class="line-y"></td>
+          <td class="line-y-2"></td>
+        </tr>
+        <tr class="box__row">
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+        </tr>
+        <tr class="box__row">
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+        </tr>
+        <tr class="box__row">
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td>
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+        </tr>
+      </table>
+      <ion-icon class="icon__restart" name="refresh-outline"></ion-icon>
+    </div>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>
