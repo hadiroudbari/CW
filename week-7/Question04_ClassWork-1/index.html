@@ -10,11 +10,13 @@
   <body>
     <div class="container">
       <div class="result__modal">
-        <div class="cross">
-          <div class="line-left"></div>
-          <div class="line-right"></div>
+        <div style="display: flex">
+          <div class="cross">
+            <div class="line-left"></div>
+            <div class="line-right"></div>
+          </div>
+          <div class="circle"></div>
         </div>
-        <div class="circle"></div>
         <p class="result__text">WINNER!</p>
       </div>
 
@@ -33,7 +35,7 @@
         </div>
       </div>
 
-      <table>
+      <table id="table">
         <tr>
           <td class="line-x"></td>
           <td class="line-x-2"></td>
@@ -41,44 +43,21 @@
           <td class="line-y-2"></td>
         </tr>
         <tr class="box__row">
-          <td>
+          <td class="box__item" id="c1">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
             </div>
             <div class="circle"></div>
           </td>
-          <td>
+          <td class="box__item" id="c2">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
             </div>
             <div class="circle"></div>
           </td>
-          <td>
-            <div class="cross">
-              <div class="line-left"></div>
-              <div class="line-right"></div>
-            </div>
-            <div class="circle"></div>
-          </td>
-        </tr>
-        <tr class="box__row">
-          <td>
-            <div class="cross">
-              <div class="line-left"></div>
-              <div class="line-right"></div>
-            </div>
-            <div class="circle"></div>
-          </td>
-          <td>
-            <div class="cross">
-              <div class="line-left"></div>
-              <div class="line-right"></div>
-            </div>
-            <div class="circle"></div>
-          </td>
-          <td>
+          <td class="box__item" id="c3">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
@@ -87,21 +66,44 @@
           </td>
         </tr>
         <tr class="box__row">
-          <td>
+          <td class="box__item" id="c4">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
             </div>
             <div class="circle"></div>
           </td>
-          <td>
+          <td class="box__item" id="c5">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
             </div>
             <div class="circle"></div>
           </td>
-          <td>
+          <td class="box__item" id="c6">
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+        </tr>
+        <tr class="box__row">
+          <td class="box__item" id="c7">
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td class="box__item" id="c8">
+            <div class="cross">
+              <div class="line-left"></div>
+              <div class="line-right"></div>
+            </div>
+            <div class="circle"></div>
+          </td>
+          <td class="box__item" id="c9">
             <div class="cross">
               <div class="line-left"></div>
               <div class="line-right"></div>
@@ -110,6 +112,12 @@
           </td>
         </tr>
       </table>
+      <select id="game__mode">
+        <option value="select">Select GameMode</option>
+        <option value="playerMode">Player vs Player</option>
+        <option value="normal">Normal</option>
+        <option value="impossible">Impossible</option>
+      </select>
       <ion-icon class="icon__restart" name="refresh-outline"></ion-icon>
     </div>
   </body>
