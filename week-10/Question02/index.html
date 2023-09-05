@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- As a link -->
+    <nav class="navbar bg-darkblue py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">React Shopping Cart</a>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row p-5 fs-5">
+        <div class="col-xl-8 border-bottom border-black">
+          <div class="row">
+            <div class="col-xl-4">
+              <p>6 Products</p>
+            </div>
+            <div class="col-xl-4">
+              <div class="row">
+                <div class="col-xl-2">
+                  <p>Older</p>
+                  <!-- Example single danger button -->
+                </div>
+                <div class="col-xl-6">
+                  <select name="" id="">
+                    <option value="">Lowest</option>
+                    <option value="">Highest</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="row">
+                <div class="col-xl-2"><p>Filter</p></div>
+                <div class="col-xl-6">
+                  <select name="" id="">
+                    <option value="">All</option>
+                    <option value="">XS</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                    <option value="">XXL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 border-bottom border-black ms-5 text-center">
+          <p id="cart__empty">Cart is empty now</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-5">
+      <div class="row text-center">
+        <div class="col-xl-8">
+          <div class="row" id="product__box"></div>
+        </div>
+        <div class="col-xl-4">
+          <div class="row" id="product__cart"></div>
+          <div class="row">
+            <div class="col-xl-10 ps-5 mt-5 pb-5 mb-5">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-xl-6 pt-4 ps-5">
+                  <p class="fs-5" id="total__price">
+                    Total:$44.699999999999996
+                  </p>
+                </div>
+                <div class="col-xl-3">
+                  <button class="btn btn-warning py-3 px-4">Proceed</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-10">
+              <div class="row justify-content-end">
+                <div class="col-xl-10">
+                  <div class="mb-3 text-start">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="name@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-xl-10">
+                  <div class="mb-3 text-start">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Name</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-xl-10">
+                  <div class="mb-3 text-start">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Your Address"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-xl-10">
+                  <button class="btn btn-warning w-100 mt-4 py-3 fs-5">
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-darkblue py-3 text-center text-white">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white" href="#">All right is reserved</a>
+      </div>
+    </nav>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"
+  ></script>
+</html>

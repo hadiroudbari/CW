@@ -1,0 +1,58 @@
+body {
+  height: 100vh;
+}
+
+ion-icon {
+  cursor: pointer;
+  z-index: -1;
+}
+
+.fs-0 {
+  font-size: 6rem;
+}
+
+.fs-1 {
+  font-size: 3rem !important;
+  font-weight: 600;
+}
+
+.fs-2 {
+  font-size: 2rem !important;
+}
+
+.bg-lightgreen {
+  background-color: #cedebd;
+}
+
+.bg-darkgreen {
+  background-color: #9eb384;
+}
+
+.bg-lightcream {
+  background-color: #faf1e4;
+}
+
+.bg-ultradarkgreen {
+  background-color: #435334;
+}
+
+.child {
+  width: 75px;
+  height: 75px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  display: none;
+}
+
+.sidebar {
+  transform: translateX(-220px);
+  transition: all 0.5s ease-in-out;
+}
