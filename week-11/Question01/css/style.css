@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:focus {
+    outline: none; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out; }
+
+input,
+input:focus {
+  outline: none;
+  border: none; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+body {
+  font-family: "Rubik";
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4; }
+
+header {
+  background-color: #444444;
+  color: #fff; }
+  header nav {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header nav a {
+      color: #fff;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 1.5rem 1rem;
+      border-left: 1px solid #575757;
+      cursor: pointer; }
+      header nav a:hover {
+        background-color: #505050; }
+    header nav ul {
+      display: flex; }
+    header nav .nav__right img {
+      width: 20px;
+      height: 20px; }
+    header nav .nav__left .icon {
+      color: #fff; }
+    header nav .nav__left img {
+      width: 60px;
+      height: 30px; }
+    header nav .nav__left .bell {
+      font-size: 1.5rem;
+      color: #575757; }
+    header nav .nav__left li:first-child a {
+      position: relative;
+      z-index: 0; }
+      header nav .nav__left li:first-child a::before {
+        content: "1";
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        background-color: #c93d31;
+        color: #fff;
+        font-size: 0.75rem;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        z-index: 99999; }
+    header nav .nav__left li:first-child a:hover .bell {
+      color: #fff; }

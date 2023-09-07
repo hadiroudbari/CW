@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap");
+
+@mixin reset_all_elements {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin reset_all_inputs {
+  outline: none;
+  border: none;
+}
+
+@mixin links_styles {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+* {
+  @include reset_all_elements;
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  @include links_styles;
+}
+
+input,
+input:focus {
+  @include reset_all_inputs;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+$bg-gray: #444444;
+$border-gray: #575757;
+$nav-item-hover: #505050;
+$bg-red: #c93d31;
+$font-family: "Rubik";
+$font-size: 1rem;
+$font-size-sm: 0.75rem;
+$font-size-lg: 1.5rem;
+$font-color: #333;
+$font-color-white: #fff;
+$line-height: 1.4;
+$container: 1200px;
+
+body {
+  font-family: $font-family;
+  color: $font-color;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+header {
+  background-color: $bg-gray;
+  color: $font-color-white;
+  nav {
+    margin: 0 auto;
+    width: $container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      color: $font-color-white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 1.5rem 1rem;
+      border-left: 1px solid $border-gray;
+      cursor: pointer;
+      &:hover {
+        background-color: $nav-item-hover;
+      }
+    }
+    ul {
+      display: flex;
+    }
+    .nav__right img {
+      width: 20px;
+      height: 20px;
+    }
+    .nav__left {
+      .icon {
+        color: $font-color-white;
+      }
+      img {
+        width: 60px;
+        height: 30px;
+      }
+      .bell {
+        font-size: $font-size-lg;
+        color: $border-gray;
+      }
+      li:first-child {
+        a {
+          position: relative;
+          z-index: 0;
+          &::before {
+            content: "1";
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            background-color: $bg-red;
+            color: $font-color-white;
+            font-size: $font-size-sm;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            z-index: 99999;
+          }
+        }
+        a:hover .bell {
+          color: $font-color-white;
+        }
+      }
+    }
+  }
+}
