@@ -1,0 +1,14 @@
+{
+  "name": "jobinja",
+  "version": "1.0.0",
+  "description": "sass project for cw11",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "group4",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
