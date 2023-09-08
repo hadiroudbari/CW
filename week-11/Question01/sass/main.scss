@@ -1,9 +1,8 @@
-
 @font-face {
-	font-family: 'samim';
-	src: url(fonts/Samim.woff) format("woff")  , url(fonts/Samim.eot) format("eot") , url(fonts/Samim.ttf) format("ttf")
+  font-family: "samim";
+  src: url(fonts/Samim.woff) format("woff"), url(fonts/Samim.eot) format("eot"),
+    url(fonts/Samim.ttf) format("ttf");
 }
-
 
 @mixin reset_all_elements {
   margin: 0;
@@ -49,21 +48,25 @@ img {
 $bg-gray: #444444;
 $border-gray: #575757;
 $nav-item-hover: #505050;
-$bg-light-gray:#f9f9f9;
+$bg-light-gray: #f9f9f9;
 $bg-red: #c93d31;
 $font-family: "samim";
 $font-size: 1rem;
 $font-size-sm: 0.75rem;
-$font-size-md:1.25rem;
-$font-bold:600;
+$font-size-md: 1.25rem;
+$font-bold: 600;
 $font-size-lg: 1.5rem;
 $font-color: #333;
 $font-color-white: #fff;
-$bg-green:#1ABC9C;
+$bg-green: #1abc9c;
 $line-height: 1.4;
 $container: 1200px;
-$gradient:linear-gradient(90deg, rgba(54,177,220,1) 0%, rgba(26,188,156,1) 100%);
-$bg-yellow:#FFCD70;
+$gradient: linear-gradient(
+  90deg,
+  rgba(54, 177, 220, 1) 0%,
+  rgba(26, 188, 156, 1) 100%
+);
+$bg-yellow: #ffcd70;
 
 body {
   font-family: $font-family;
@@ -137,127 +140,144 @@ header {
         a:hover .bell {
           color: $font-color-white;
         }
-        
       }
-      
     }
   }
 }
-.search_box{
+.search_box {
   background: $gradient;
   text-align: center;
   display: flex;
   gap: 30px;
-  padding:30px;
+  padding: 30px;
   flex-direction: column;
-  .search_box--title{
-    color:$font-color-white ;
-
+  .search_box--title {
+    color: $font-color-white;
+    h3 {
+      margin-bottom: 0.5rem;
+    }
   }
-  .form{
+  .form {
     display: flex;
     justify-content: center;
     gap: 0.7rem;
-    .input__box{
+    .input__box {
       background-color: $font-color-white;
-      padding:0 10px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
       border-radius: 4px;
 
-
-    .input-form{
-      width: 300px;
-      height: 50px;
-      padding: 10px;
-      cursor: pointer;
-
-
+      .input-form {
+        font-family: $font-family;
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      ion-icon {
+        width: 20px;
+        height: 20px;
+      }
     }
-    ion-icon{
-      width: 20px;
-      height: 20px;
+    button {
+      font-family: $font-family;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 4px;
+      background-color: $bg-yellow;
+      font-size: $font-size-md;
+      font-weight: $font-bold;
     }
-    
   }
-  button{
-    padding: 10px 25px;
-    border: none;
-    border-radius: 4px;
-    background-color:$bg-yellow ;
-    font-size: $font-size-md;
-    font-weight: $font-bold;
-  }
-  }
-  .view-all{
+  .view-all {
     display: flex;
     align-items: center;
     justify-content: center;
     color: $font-color-white;
-
-    a{
+    gap: 0.5rem;
+    a {
       color: $font-color-white;
       font-size: $font-size-sm;
       font-weight: $font-bold;
     }
   }
 }
-.loaded-box{
- display: flex;
- justify-content: center;
- align-items: center;
- width: 600px;
- margin: 10px auto;
- background-color:$bg-light-gray ;
- border-radius: 40px;
+.loaded-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-sm;
+  width: 400px;
+  margin: 30px auto;
+  background-color: $bg-light-gray;
+  border-radius: 40px;
 
- .loader {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: relative;
-  transform:rotate(45deg);
-  background: #fff;
-  margin: 10px;
-}
-.loader::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  inset: 0px;
-  border-radius: 50%;
-  border:24px solid $bg-green;
-  animation: prixClipFix 4s infinite linear;
-}
+  .loader {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+    background: #fff;
+    margin: 10px;
+  }
+  .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 10px solid $bg-green;
+    animation: prixClipFix 6s infinite linear;
+  }
 
-@keyframes prixClipFix {
-    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
-}
-}
-
-.swiper{
-  width: 1000px;
-  height: 300px;
-  .swiper-wrapper{
-display: flex;
-justify-content: space-between;
-    .swiper-slide{
-      display: flex;
-      gap: 40px;
-
-      img{
-        width: 150px;
-        height: 150px;
-      
-      }
-      p{
-        color:gray;
-      }
+  @keyframes prixClipFix {
+    0% {
+      clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    }
+    25% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+    50% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+    }
+    75% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
     }
   }
 }
 
+.swiper {
+  width: 1200px;
+  height: 300px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  .swiper-wrapper {
+    width: 1000px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    .swiper-slide {
+      display: flex;
+      gap: 40px;
+      text-align: center;
+      img {
+        width: 150px;
+        height: 150px;
+        padding: 30px;
+      }
+      p {
+        color: gray;
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 35%;
+  }
+}
