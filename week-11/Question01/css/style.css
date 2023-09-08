@@ -222,4 +222,44 @@ header nav .nav__left li:first-child a:hover .bell {
   color: gray;
 }
 
+.newspaper {
+  background-color: #f9f9f9;
+  display: flex;
+  gap: 1rem;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  width: 1000px;
+}
+.newspaper .newspaper-left {
+  margin-right: 3rem;
+}
+.newspaper .btn-submit {
+  background-color: #1ABC9C;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.newspaper .btn-login {
+  background-color: #fff;
+  color: #1ABC9C;
+  padding: 8px 15px;
+  border: 2px solid #1ABC9C;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.title-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border-bottom: solid 0.5px gray;
+  width: 1000px;
+  margin: 2rem auto;
+}
+
 /*# sourceMappingURL=style.css.map */
