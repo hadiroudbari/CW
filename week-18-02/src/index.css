@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.bg-input-gray {
+  background-color: #576273;
+}
+
+.bg-input-yellow {
+  background-color: #bcc02e;
+}
+
+.text-input-yellow {
+  color: #bcc02e;
+}
+
+.text-light-yellow {
+  color: #ebec0d;
+}
